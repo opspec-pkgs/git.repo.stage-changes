@@ -28,11 +28,8 @@ opctl run github.com/opspec-pkgs/git.add#1.0.0
 op:
   pkg: { ref: github.com/opspec-pkgs/git.add#1.0.0 }
   inputs:
-    authorEmail:
-    authorName:
-    message:
+    pathSpec:
     # begin optional params
-    noVerify:
     repo:
     # end optional params
   outputs:
