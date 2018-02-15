@@ -1,0 +1,27 @@
+name: github.com/opspec-pkgs/git.add
+description: stages changes to a git repo
+inputs:
+  repo:
+    dir:
+      description: repo to stage changes to
+      default: ./
+  pathSpec:
+    string:
+      description: paths to stage changes from; formatted as space separated relative paths &/or fileglobs
+      constraints: { minLength: 1 }
+outputs:
+  repo:
+    dir:
+      description: repo with staged changes
+version: 1.0.0
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    dirs:
+      /repo: $(repo)
+    envVars:
+      pathSpec:
+    files:
+      /cmd.sh:
+    image: { ref: 'opspecpkgs/git.add:1.0.0' }
+    workDir: /repo
