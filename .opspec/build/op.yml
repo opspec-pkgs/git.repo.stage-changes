@@ -12,6 +12,8 @@ outputs:
   imageTar:
     file:
       description: tar of the built image
+  pkg:
+    dir: {}
 run:
   serial:
      - op:

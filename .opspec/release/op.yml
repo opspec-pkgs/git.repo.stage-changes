@@ -25,6 +25,9 @@ inputs:
   pkg:
     dir:
       default: .
+outputs:
+  pkg:
+    dir: {}
 run:
   serial:
     - op:
@@ -34,6 +37,7 @@ run:
           pkg:
         outputs:
           imageTar:
+          pkg:
     - op:
         pkg: { ref: github.com/opspec-pkgs/docker.image.push#2.0.0 }
         inputs:
