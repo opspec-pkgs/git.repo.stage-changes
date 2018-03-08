@@ -5,5 +5,15 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[1.1.0] - 2018-03-07
+
+### Added
+
+- opspec 0.1.6 compatibility
+
+### Changed
+
+- rename from `git.add` to `git.repo.stage-changes`
+
 ## \[1.0.0] - 2018-02-15
 

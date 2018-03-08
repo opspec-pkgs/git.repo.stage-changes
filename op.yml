@@ -1,5 +1,5 @@
-name: github.com/opspec-pkgs/git.add
-description: stages changes to a git repo
+name: github.com/opspec-pkgs/git.repo.stage-changes
+description: Stages changes made to a git repo; equivalent to `git add`
 inputs:
   repo:
     dir:
@@ -13,7 +13,7 @@ outputs:
   repo:
     dir:
       description: repo with staged changes
-version: 1.0.0
+version: 1.1.0
 run:
   container:
     cmd: [ /cmd.sh ]
@@ -23,5 +23,5 @@ run:
       pathSpec:
     files:
       /cmd.sh:
-    image: { ref: 'opspecpkgs/git.add:1.0.0' }
+    image: { ref: 'opspecpkgs/git.repo.stage-changes:1.1.0' }
     workDir: /repo
